@@ -1,4 +1,4 @@
 ./node_modules
 ./.idea
 .env
-./src/config/sequelize-config.json
+!src/config/sequelize-config.json
