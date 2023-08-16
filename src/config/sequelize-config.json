@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "4l4n*D4m14n",
-    "database": "prueba_disney",
+    "password": null,
+    "database": "database_dev",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
