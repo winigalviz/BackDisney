@@ -34,7 +34,9 @@ module.exports.login = async (body) => {
                 }
             });
             if(autenticacion) {
-                const jwt = jwtUtils.create({ id: autenticacion.id, mail: autenticacion.correo });
+                const data = { id: autenticacion.id, mail: autenticacion.correo };
+                const jwt = jwtUtils.create(data);
+                const decode = jwtUtils
                 response.status = 200;
                 response.message = `Token: ${jwt}`;
             } else {

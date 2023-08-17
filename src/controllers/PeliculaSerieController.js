@@ -12,3 +12,13 @@ module.exports.readAll = async (req, res) => {
     controllerUtils.buildResponse(res, response);
 
 }
+
+module.exports.update = async (req, res) => {
+    response = await peliculaSerieService.update(req.params.id, req.body);
+    controllerUtils.buildResponse(res, response);
+}
+
+module.exports.delete = async (req, res) => {
+    response = await peliculaSerieService.delete(req.params.id);
+    controllerUtils.buildResponse(res, response);
+}
