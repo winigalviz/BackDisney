@@ -56,9 +56,9 @@ module.exports.update = async (id, body) => {
 
 module.exports.delete = async (id) => {
     try {
-        const peliculaSerie = peliculaSerieModel.findOne({ where: { id: id } });
+        const peliculaSerie = await peliculaSerieModel.findOne({ where: { id: id } });
         if(peliculaSerie) {
-            peliculaSerie.delete();
+            peliculaSerie.destroy();
             response.status = 200;
             response.message = "Personaje eliminado";
         } else {

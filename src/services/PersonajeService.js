@@ -53,9 +53,10 @@ module.exports.update = async (id, body) => {
 
 module.exports.delete = async (id) => {
     try {
-        const personaje = personajeModel.findOne( { where: { id: id } });
+        const personaje = await personajeModel.findOne( { where: { id: id } });
         if(personaje) {
-            personaje.delete();
+            console.log(personaje)
+            personaje.destroy();
             response.status = 200;
             response.message = "Personaje eliminado";
         } else {
