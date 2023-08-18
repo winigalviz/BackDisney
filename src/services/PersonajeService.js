@@ -96,6 +96,7 @@ module.exports.filter = async (data) => {
         }
         if(Object.keys(where).length > 0) options.where = where;
         options.include = include;
+        console.log(options);
 
         const personaje = await personajeModel.findAll(options);
         response.status = 200;
