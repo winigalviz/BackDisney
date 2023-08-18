@@ -8,5 +8,6 @@ router.get('/', PeliculaSerieController.readAll);
 router.post("/", PeliculaSerieController.create);
 router.put("/:id", PeliculaSerieController.update);
 router.delete("/:id", PeliculaSerieController.delete);
+router.put("/:id/personajes", PeliculaSerieController.setPersonajes);
 
 module.exports = router;
